@@ -1,0 +1,808 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Wireless Earbuds",
+    "price": 4500,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    "description": "Crystal clear sound with noise cancellation technology",
+    "fullDescription": "Experience premium audio quality with active noise cancellation, 30-hour battery life, and seamless connectivity. Perfect for music lovers and professionals who demand the best.",
+    "category": "Electronics",
+    "stock": 25,
+    "rating": 4.8,
+    "reviews": 342,
+    "specs": ["Active Noise Cancellation", "30-hour battery", "Bluetooth 5.0", "IPX4 Water Resistant"],
+    "reviews_data": [
+      { "id": 1, "author": "John K.", "rating": 5, "text": "Excellent sound quality! Best purchase ever." },
+      { "id": 2, "author": "Sarah M.", "rating": 5, "text": "Great noise cancellation, very comfortable." },
+      { "id": 3, "author": "Mike T.", "rating": 4, "text": "Good product, but a bit pricey." }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch Pro",
+    "price": 12999,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    "description": "Feature-rich smartwatch with fitness tracking and heart rate monitor",
+    "fullDescription": "Stay connected and healthy with advanced fitness tracking, heart rate monitoring, sleep tracking, and 7-day battery life. Compatible with iOS and Android.",
+    "category": "Electronics",
+    "stock": 15,
+    "rating": 4.6,
+    "reviews": 218,
+    "specs": ["AMOLED Display", "7-day battery", "Heart rate monitor", "Water resistant to 50m", "GPS tracking"],
+    "reviews_data": [
+      { "id": 1, "author": "Alex P.", "rating": 5, "text": "Perfect fitness companion!" },
+      { "id": 2, "author": "Emma W.", "rating": 4, "text": "Great features, battery lasts long." }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Premium USB-C Cable Bundle",
+    "price": 899,
+    "image": "https://images.unsplash.com/photo-1609034227505-5876f6aa4e90?w=500&h=500&fit=crop",
+    "description": "Fast charging cables with 2-year warranty",
+    "fullDescription": "Pack of 3 high-quality USB-C cables with fast charging support up to 100W. Durable braided design with lifetime warranty. Perfect for home, office, and travel.",
+    "category": "Accessories",
+    "stock": 50,
+    "rating": 4.7,
+    "reviews": 156,
+    "specs": ["3 cables in bundle", "100W fast charging", "Braided design", "Lifetime warranty"],
+    "reviews_data": [
+      { "id": 1, "author": "David L.", "rating": 5, "text": "Great value for money!" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Leather Phone Case",
+    "price": 1999,
+    "image": "https://images.unsplash.com/photo-1552062407-291602a6f3ec?w=500&h=500&fit=crop",
+    "description": "Premium leather protective case with elegant design",
+    "fullDescription": "Genuine leather case with soft interior protection. Slim profile design doesn't add bulk while providing excellent protection. Available in multiple colors.",
+    "category": "Accessories",
+    "stock": 40,
+    "rating": 4.5,
+    "reviews": 289,
+    "specs": ["Genuine leather", "Slim profile", "Multiple colors", "Precise cutouts"],
+    "reviews_data": [
+      { "id": 1, "author": "Lisa C.", "rating": 5, "text": "Looks premium and protects well!" },
+      { "id": 2, "author": "Tom R.", "rating": 4, "text": "Good quality, great protection." }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Portable Bluetooth Speaker",
+    "price": 5999,
+    "image": "https://images.unsplash.com/photo-1589003077984-894e133da26d?w=500&h=500&fit=crop",
+    "description": "Powerful sound in a compact design, water-resistant",
+    "fullDescription": "Compact yet powerful speaker with 360-degree sound, 20-hour battery life, and IPX7 water resistance. Perfect for outdoor adventures and beach trips.",
+    "category": "Audio",
+    "stock": 20,
+    "rating": 4.7,
+    "reviews": 421,
+    "specs": ["360-degree sound", "20-hour battery", "IPX7 water resistant", "Bluetooth 5.0", "Built-in microphone"],
+    "reviews_data": [
+      { "id": 1, "author": "James B.", "rating": 5, "text": "Amazing sound for the size!" },
+      { "id": 2, "author": "Nina S.", "rating": 5, "text": "Best speaker purchase!" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Tempered Glass Screen Protector",
+    "price": 699,
+    "image": "https://images.unsplash.com/photo-1587826080692-f439cd0b70da?w=500&h=500&fit=crop",
+    "description": "Advanced protection with anti-fingerprint coating",
+    "fullDescription": "Pack of 2 tempered glass protectors with 9H hardness. Easy installation, crystal clear display, and anti-fingerprint coating. Protects against scratches and drops.",
+    "category": "Accessories",
+    "stock": 100,
+    "rating": 4.4,
+    "reviews": 512,
+    "specs": ["9H hardness", "Anti-fingerprint", "Pack of 2", "Easy installation", "Crystal clear"],
+    "reviews_data": [
+      { "id": 1, "author": "Robert K.", "rating": 4, "text": "Good protection at great price." }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Wireless Charging Pad",
+    "price": 2499,
+    "image": "https://images.unsplash.com/photo-1591290621749-bcb630db014f?w=500&h=500&fit=crop",
+    "description": "Fast wireless charging for all Qi-enabled devices",
+    "fullDescription": "Fast 15W wireless charging pad compatible with all Qi-enabled devices. LED indicator, non-slip surface, and compact design. Charges through cases up to 5mm.",
+    "category": "Electronics",
+    "stock": 30,
+    "rating": 4.6,
+    "reviews": 187,
+    "specs": ["15W fast charging", "Qi compatible", "LED indicator", "Non-slip surface"],
+    "reviews_data": [
+      { "id": 1, "author": "Grace H.", "rating": 5, "text": "Convenient and reliable!" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Premium Camera Lens Filter Kit",
+    "price": 3999,
+    "image": "https://images.unsplash.com/photo-1606986628025-35d57e735ae0?w=500&h=500&fit=crop",
+    "description": "Professional-grade filters for photography enthusiasts",
+    "fullDescription": "Complete kit includes UV, CPL, and ND filters. Perfect for photography professionals and hobbyists. Reduces glare, enhances colors, and enables creative exposure control.",
+    "category": "Photography",
+    "stock": 18,
+    "rating": 4.8,
+    "reviews": 143,
+    "specs": ["UV, CPL, ND filters", "Professional grade", "Glass construction", "52mm/58mm/67mm available"],
+    "reviews_data": [
+      { "id": 1, "author": "Steve P.", "rating": 5, "text": "Professional quality at great price!" },
+      { "id": 2, "author": "Lucy M.", "rating": 5, "text": "Highly recommend for photographers." }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "4K Webcam Pro",
+    "price": 8999,
+    "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&h=500&fit=crop",
+    "description": "Crystal clear 4K video for streaming and video calls",
+    "fullDescription": "Professional-grade 4K webcam with auto-focus, wide-angle lens, and built-in stereo microphone. Perfect for content creators, streamers, and professionals.",
+    "category": "Electronics",
+    "stock": 22,
+    "rating": 4.7,
+    "reviews": 198,
+    "specs": ["4K resolution", "Auto-focus", "Wide-angle lens", "Stereo microphone", "USB 3.0"],
+    "reviews_data": [
+      { "id": 1, "author": "Chris D.", "rating": 5, "text": "Perfect for streaming!" }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Mechanical Keyboard RGB",
+    "price": 6499,
+    "image": "https://images.unsplash.com/photo-1587829191301-51b40f1eeb6f?w=500&h=500&fit=crop",
+    "description": "Gaming keyboard with customizable RGB backlighting",
+    "fullDescription": "High-performance mechanical keyboard with customizable RGB lighting, aluminum frame, and hot-swappable switches. Perfect for gaming and typing.",
+    "category": "Electronics",
+    "stock": 17,
+    "rating": 4.8,
+    "reviews": 267,
+    "specs": ["RGB lighting", "Mechanical switches", "Aluminum frame", "Hot-swappable", "Programmable keys"],
+    "reviews_data": [
+      { "id": 1, "author": "Mike G.", "rating": 5, "text": "Best gaming keyboard ever!" }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "USB-A Hub 7-Port",
+    "price": 1299,
+    "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500&h=500&fit=crop",
+    "description": "Expand your USB connectivity with this powered hub",
+    "fullDescription": "7-port USB 3.0 hub with independent switches and power adapter. Fast 5Gbps data transfer. Perfect for connecting multiple devices simultaneously.",
+    "category": "Accessories",
+    "stock": 35,
+    "rating": 4.5,
+    "reviews": 134,
+    "specs": ["7 USB 3.0 ports", "Independent switches", "5Gbps transfer", "Power adapter included"],
+    "reviews_data": [
+      { "id": 1, "author": "Alice T.", "rating": 4, "text": "Works as expected!" }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Laptop Stand Aluminum",
+    "price": 2299,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop",
+    "description": "Ergonomic aluminum laptop stand for better posture",
+    "fullDescription": "Premium aluminum laptop stand with adjustable height and angle. Supports laptops up to 17 inches. Folds compact for easy portability.",
+    "category": "Accessories",
+    "stock": 28,
+    "rating": 4.6,
+    "reviews": 89,
+    "specs": ["Aluminum construction", "Adjustable height", "Folds compact", "Supports up to 17 inches"],
+    "reviews_data": [
+      { "id": 1, "author": "Beth U.", "rating": 5, "text": "Great for ergonomics!" }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Noise Cancelling Headphones",
+    "price": 7999,
+    "image": "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=500&h=500&fit=crop",
+    "description": "Studio-quality sound with active noise cancellation",
+    "fullDescription": "Over-ear headphones with active noise cancellation, 40-hour battery life, and premium sound quality. Perfect for music production and travel.",
+    "category": "Audio",
+    "stock": 19,
+    "rating": 4.9,
+    "reviews": 412,
+    "specs": ["Active noise cancellation", "40-hour battery", "Studio quality", "Bluetooth 5.0", "Foldable design"],
+    "reviews_data": [
+      { "id": 1, "author": "Oliver V.", "rating": 5, "text": "Best headphones I've owned!" }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Portable SSD 1TB",
+    "price": 9999,
+    "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500&h=500&fit=crop",
+    "description": "Ultra-fast portable storage for on-the-go professionals",
+    "fullDescription": "Compact 1TB portable SSD with USB-C connectivity. Up to 1050MB/s transfer speed. Durable, shock-resistant design. Perfect for photographers and videographers.",
+    "category": "Storage",
+    "stock": 14,
+    "rating": 4.8,
+    "reviews": 187,
+    "specs": ["1TB capacity", "USB-C 3.1", "1050MB/s transfer", "Shock resistant", "Compact design"],
+    "reviews_data": [
+      { "id": 1, "author": "Paul W.", "rating": 5, "text": "Fast and reliable!" }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Wireless Mouse Pro",
+    "price": 1799,
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=500&fit=crop",
+    "description": "Ergonomic wireless mouse with precision tracking",
+    "fullDescription": "Wireless mouse with 2.4GHz connectivity, adjustable DPI, and 18-month battery life. Ergonomic design reduces hand fatigue during long work sessions.",
+    "category": "Electronics",
+    "stock": 42,
+    "rating": 4.5,
+    "reviews": 223,
+    "specs": ["2.4GHz wireless", "Adjustable DPI", "18-month battery", "Ergonomic design", "Precision tracking"],
+    "reviews_data": [
+      { "id": 1, "author": "Quinn X.", "rating": 4, "text": "Comfortable and reliable!" }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "USB-C Docking Station",
+    "price": 4299,
+    "image": "https://images.unsplash.com/photo-1609034227505-5876f6aa4e90?w=500&h=500&fit=crop",
+    "description": "All-in-one docking solution for USB-C laptops",
+    "fullDescription": "13-in-1 docking station with HDMI, USB-A, SD card reader, and power delivery. Compatible with all USB-C devices. Perfect for MacBook and Windows laptops.",
+    "category": "Electronics",
+    "stock": 21,
+    "rating": 4.7,
+    "reviews": 156,
+    "specs": ["13 ports", "4K HDMI", "100W power delivery", "SD card reader", "USB 3.0 Hub"],
+    "reviews_data": [
+      { "id": 1, "author": "Ryan Y.", "rating": 5, "text": "Excellent docking solution!" }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Smart LED Desk Lamp",
+    "price": 2999,
+    "image": "https://images.unsplash.com/photo-1565636166375-2bfc52962edc?w=500&h=500&fit=crop",
+    "description": "Smart LED lamp with adjustable brightness and color",
+    "fullDescription": "LED desk lamp with smart control, adjustable brightness (0-100%), and color temperature. Compatible with smart home systems. USB charging port built-in.",
+    "category": "Lighting",
+    "stock": 26,
+    "rating": 4.6,
+    "reviews": 145,
+    "specs": ["Smart control", "Adjustable brightness", "Color temperature", "USB charging", "Eye-care technology"],
+    "reviews_data": [
+      { "id": 1, "author": "Sophie Z.", "rating": 5, "text": "Perfect for my desk!" }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Gaming Mouse Pad XL",
+    "price": 1499,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop",
+    "description": "Large mouse pad with smooth surface and waterproof base",
+    "fullDescription": "Oversized gaming mouse pad (800x300mm) with smooth cloth surface. Non-slip rubber base prevents sliding. Perfect for gaming and productivity.",
+    "category": "Accessories",
+    "stock": 55,
+    "rating": 4.4,
+    "reviews": 198,
+    "specs": ["800x300mm size", "Smooth cloth surface", "Non-slip base", "Waterproof", "Stitched edges"],
+    "reviews_data": [
+      { "id": 1, "author": "Tony A.", "rating": 4, "text": "Great quality mousepad!" }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Webcam Light Ring",
+    "price": 1599,
+    "image": "https://images.unsplash.com/photo-1565636166375-2bfc52962edc?w=500&h=500&fit=crop",
+    "description": "Ring light for perfect video call lighting",
+    "fullDescription": "LED ring light with adjustable brightness, color temperature, and phone holder. USB powered. Perfect for video calls, streaming, and content creation.",
+    "category": "Lighting",
+    "stock": 33,
+    "rating": 4.7,
+    "reviews": 267,
+    "specs": ["LED ring light", "Adjustable brightness", "Phone holder", "USB powered", "3 color modes"],
+    "reviews_data": [
+      { "id": 1, "author": "Uma B.", "rating": 5, "text": "Professional looking video calls!" }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "HDMI 2.1 Cable 3m",
+    "price": 799,
+    "image": "https://images.unsplash.com/photo-1609034227505-5876f6aa4e90?w=500&h=500&fit=crop",
+    "description": "Premium HDMI 2.1 cable for 4K@120Hz video",
+    "fullDescription": "High-speed HDMI 2.1 cable supporting 4K@120Hz, 8K@60Hz. Gold-plated connectors. 3-meter length with durable braided design.",
+    "category": "Cables",
+    "stock": 60,
+    "rating": 4.6,
+    "reviews": 89,
+    "specs": ["HDMI 2.1 standard", "4K@120Hz support", "Gold-plated connectors", "3-meter length", "Braided design"],
+    "reviews_data": [
+      { "id": 1, "author": "Vince C.", "rating": 4, "text": "Good cable, works great!" }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Power Bank 20000mAh",
+    "price": 2199,
+    "image": "https://images.unsplash.com/photo-1609891256000-c1d193d4f6b0?w=500&h=500&fit=crop",
+    "description": "Fast charging power bank with dual USB-C and USB-A ports",
+    "fullDescription": "20000mAh capacity power bank with dual USB-C ports and USB-A. Supports PD 3.0 fast charging. Compact design, perfect for travel.",
+    "category": "Electronics",
+    "stock": 47,
+    "rating": 4.7,
+    "reviews": 334,
+    "specs": ["20000mAh capacity", "Dual USB-C", "USB-A port", "PD 3.0 fast charging", "LED display"],
+    "reviews_data": [
+      { "id": 1, "author": "Wendy D.", "rating": 5, "text": "Best power bank!" }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Phone Stand Adjustable",
+    "price": 699,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop",
+    "description": "Universal phone stand with adjustable angles",
+    "fullDescription": "Adjustable phone stand supporting all smartphone sizes. Premium aluminum construction. Perfect for desk, table, or countertop use.",
+    "category": "Accessories",
+    "stock": 72,
+    "rating": 4.5,
+    "reviews": 156,
+    "specs": ["Adjustable angles", "Aluminum construction", "Universal compatibility", "Non-slip pads", "Portable design"],
+    "reviews_data": [
+      { "id": 1, "author": "Xavier E.", "rating": 4, "text": "Solid phone stand!" }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Microphone USB Condenser",
+    "price": 4999,
+    "image": "https://images.unsplash.com/photo-1577174304202-0e4896adbe15?w=500&h=500&fit=crop",
+    "description": "Professional USB condenser microphone for streaming",
+    "fullDescription": "Studio-quality USB condenser microphone with cardioid polar pattern. Plug-and-play setup. Ideal for podcasting, streaming, and voice-overs.",
+    "category": "Audio",
+    "stock": 16,
+    "rating": 4.8,
+    "reviews": 198,
+    "specs": ["USB condenser", "Cardioid pattern", "Plug-and-play", "Studio quality", "Popfilter included"],
+    "reviews_data": [
+      { "id": 1, "author": "Yara F.", "rating": 5, "text": "Professional microphone!" }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Cable Organizer Set",
+    "price": 499,
+    "image": "https://images.unsplash.com/photo-1609034227505-5876f6aa4e90?w=500&h=500&fit=crop",
+    "description": "Organize your cables with this complete organizer set",
+    "fullDescription": "Complete cable organizer set with cable clips, sleeves, and labels. Keep your workspace tidy and organized. Easy installation.",
+    "category": "Accessories",
+    "stock": 89,
+    "rating": 4.3,
+    "reviews": 102,
+    "specs": ["Cable clips", "Sleeves", "Labels", "Easy installation", "Multiple sizes"],
+    "reviews_data": [
+      { "id": 1, "author": "Zoe G.", "rating": 4, "text": "Great for cable management!" }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Laptop Cooling Pad",
+    "price": 1899,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop",
+    "description": "Keep your laptop cool with this cooling pad",
+    "fullDescription": "Laptop cooling pad with multiple fans and adjustable height. USB powered. Reduces laptop temperature by 10-15 degrees. Supports laptops up to 17 inches.",
+    "category": "Accessories",
+    "stock": 31,
+    "rating": 4.6,
+    "reviews": 167,
+    "specs": ["Multiple fans", "Adjustable height", "USB powered", "Reduces temperature", "17 inch support"],
+    "reviews_data": [
+      { "id": 1, "author": "Aaron H.", "rating": 5, "text": "Keeps laptop cool!" }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "USB-C Hub 12-in-1",
+    "price": 3799,
+    "image": "https://images.unsplash.com/photo-1609034227505-5876f6aa4e90?w=500&h=500&fit=crop",
+    "description": "Ultimate connectivity solution with 12 ports",
+    "fullDescription": "12-in-1 USB-C hub with HDMI, USB 3.0, SD card reader, and more. 4K video output. 100W power delivery. Perfect for MacBook and USB-C laptops.",
+    "category": "Electronics",
+    "stock": 24,
+    "rating": 4.8,
+    "reviews": 234,
+    "specs": ["12 in 1 ports", "4K HDMI", "100W power delivery", "SD/microSD reader", "USB 3.0 hub"],
+    "reviews_data": [
+      { "id": 1, "author": "Bella I.", "rating": 5, "text": "Perfect hub!" }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Portable Projector Mini",
+    "price": 7499,
+    "image": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=500&h=500&fit=crop",
+    "description": "Compact projector for presentations and movies",
+    "fullDescription": "Mini portable projector with 1080p resolution, 150 lumens brightness. LED technology, quiet operation. HDMI, USB, and wireless connectivity.",
+    "category": "Electronics",
+    "stock": 12,
+    "rating": 4.7,
+    "reviews": 145,
+    "specs": ["1080p resolution", "150 lumens", "LED technology", "HDMI/USB/wireless", "Portable design"],
+    "reviews_data": [
+      { "id": 1, "author": "Cyril J.", "rating": 5, "text": "Great portable projector!" }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Webcam HD 1080p",
+    "price": 2499,
+    "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&h=500&fit=crop",
+    "description": "Clear HD webcam for video calls",
+    "fullDescription": "1080p HD webcam with auto-focus and built-in microphone. USB plug-and-play. Perfect for video conferencing and streaming.",
+    "category": "Electronics",
+    "stock": 38,
+    "rating": 4.5,
+    "reviews": 178,
+    "specs": ["1080p HD", "Auto-focus", "Built-in microphone", "USB plug-and-play", "Wide angle lens"],
+    "reviews_data": [
+      { "id": 1, "author": "Diana K.", "rating": 4, "text": "Good webcam for the price!" }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Gaming Controller Wireless",
+    "price": 3299,
+    "image": "https://images.unsplash.com/photo-1606841837239-c5a1a8a07af7?w=500&h=500&fit=crop",
+    "description": "Professional gaming controller with wireless connectivity",
+    "fullDescription": "Wireless gaming controller compatible with PC and consoles. Responsive buttons, rumble feedback. 25-hour battery life. Premium build quality.",
+    "category": "Gaming",
+    "stock": 29,
+    "rating": 4.8,
+    "reviews": 267,
+    "specs": ["Wireless 2.4GHz", "Rumble feedback", "25-hour battery", "Premium build", "Multi-platform compatible"],
+    "reviews_data": [
+      { "id": 1, "author": "Evan L.", "rating": 5, "text": "Best gaming controller!" }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Monitor Light Bar",
+    "price": 5499,
+    "image": "https://images.unsplash.com/photo-1565636166375-2bfc52962edc?w=500&h=500&fit=crop",
+    "description": "Monitor light bar for better screen lighting",
+    "fullDescription": "Monitor light bar mounted above screen. Eliminates glare and eye strain. Adjustable brightness and color temperature. USB powered.",
+    "category": "Lighting",
+    "stock": 19,
+    "rating": 4.7,
+    "reviews": 189,
+    "specs": ["Monitor mounted", "Auto brightness", "USB powered", "Eliminates glare", "Auto sensor"],
+    "reviews_data": [
+      { "id": 1, "author": "Fiona M.", "rating": 5, "text": "Great for eye comfort!" }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Graphics Tablet 10x6",
+    "price": 4899,
+    "image": "https://images.unsplash.com/photo-1554177355-61d8a38ba34f?w=500&h=500&fit=crop",
+    "description": "Digital drawing tablet for artists and designers",
+    "fullDescription": "10x6 inch graphics tablet with pressure sensitivity. Compatible with Photoshop, Illustrator. USB powered. Perfect for digital art and design.",
+    "category": "Photography",
+    "stock": 14,
+    "rating": 4.8,
+    "reviews": 134,
+    "specs": ["10x6 inch", "Pressure sensitive", "USB powered", "Compatible with design software", "Included stylus"],
+    "reviews_data": [
+      { "id": 1, "author": "Grace N.", "rating": 5, "text": "Perfect for digital drawing!" }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "KVM Switch 2 Port",
+    "price": 1299,
+    "image": "https://images.unsplash.com/photo-1609034227505-5876f6aa4e90?w=500&h=500&fit=crop",
+    "description": "Switch between two computers with one keyboard/mouse",
+    "fullDescription": "2-port KVM switch to control multiple computers with single keyboard and mouse. Hot-key switching. Compact design.",
+    "category": "Accessories",
+    "stock": 26,
+    "rating": 4.4,
+    "reviews": 98,
+    "specs": ["2 port", "Keyboard/mouse control", "Hot-key switching", "Compact", "VGA/HDMI support"],
+    "reviews_data": [
+      { "id": 1, "author": "Henry O.", "rating": 4, "text": "Works as expected!" }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "External Hard Drive 2TB",
+    "price": 3999,
+    "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500&h=500&fit=crop",
+    "description": "Reliable external backup storage",
+    "fullDescription": "2TB external hard drive with USB 3.0 connectivity. Fast data transfer. Perfect for backup and storage. Portable and durable design.",
+    "category": "Storage",
+    "stock": 43,
+    "rating": 4.6,
+    "reviews": 212,
+    "specs": ["2TB capacity", "USB 3.0", "Fast transfer", "Durable design", "Auto backup"],
+    "reviews_data": [
+      { "id": 1, "author": "Iris P.", "rating": 4, "text": "Reliable storage!" }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "USB-A Splitter 4-Way",
+    "price": 899,
+    "image": "https://images.unsplash.com/photo-1609034227505-5876f6aa4e90?w=500&h=500&fit=crop",
+    "description": "Simple 4-port USB splitter",
+    "fullDescription": "Compact 4-port USB 2.0 splitter. No external power needed. Great for hubs. Compatible with all USB devices.",
+    "category": "Accessories",
+    "stock": 67,
+    "rating": 4.3,
+    "reviews": 145,
+    "specs": ["4 USB ports", "USB 2.0", "No power needed", "Compact", "Universal compatibility"],
+    "reviews_data": [
+      { "id": 1, "author": "Jack Q.", "rating": 4, "text": "Basic but useful!" }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Monitor Mount Stand",
+    "price": 2899,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop",
+    "description": "Ergonomic monitor stand with storage",
+    "fullDescription": "Premium monitor stand with adjustable height and tilt. Built-in storage for keyboard and accessories. Supports up to 30 inch monitors.",
+    "category": "Accessories",
+    "stock": 21,
+    "rating": 4.7,
+    "reviews": 167,
+    "specs": ["Adjustable height", "Tilt adjustment", "Built-in storage", "30 inch support", "Aluminum base"],
+    "reviews_data": [
+      { "id": 1, "author": "Karen R.", "rating": 5, "text": "Great monitor stand!" }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Keyboard Wrist Rest",
+    "price": 799,
+    "image": "https://images.unsplash.com/photo-1542821956-2c60a1b4b0ba?w=500&h=500&fit=crop",
+    "description": "Ergonomic wrist rest for comfortable typing",
+    "fullDescription": "Memory foam wrist rest matching keyboard width. Reduces wrist strain during typing. Non-slip base.",
+    "category": "Accessories",
+    "stock": 54,
+    "rating": 4.5,
+    "reviews": 123,
+    "specs": ["Memory foam", "Ergonomic design", "Non-slip base", "Keyboard matching", "Washable cover"],
+    "reviews_data": [
+      { "id": 1, "author": "Leo S.", "rating": 4, "text": "Good wrist support!" }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "USB Flash Drive 128GB",
+    "price": 1599,
+    "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500&h=500&fit=crop",
+    "description": "Fast USB 3.0 flash drive with high capacity",
+    "fullDescription": "128GB USB 3.0 flash drive with high-speed data transfer. Durable metal design. Perfect for file transfer and backup.",
+    "category": "Storage",
+    "stock": 48,
+    "rating": 4.6,
+    "reviews": 189,
+    "specs": ["128GB capacity", "USB 3.0", "Fast transfer", "Metal design", "Compact"],
+    "reviews_data": [
+      { "id": 1, "author": "Mia T.", "rating": 4, "text": "Fast and reliable!" }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Desktop Organizer 5-Tier",
+    "price": 1699,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop",
+    "description": "Keep your desk organized with this 5-tier organizer",
+    "fullDescription": "5-tier desk organizer made from bamboo. Compartments for pens, papers, and gadgets. Natural wood finish.",
+    "category": "Accessories",
+    "stock": 37,
+    "rating": 4.5,
+    "reviews": 145,
+    "specs": ["5-tier design", "Bamboo material", "Natural finish", "Multiple compartments", "Compact footprint"],
+    "reviews_data": [
+      { "id": 1, "author": "Noah U.", "rating": 4, "text": "Nice desk organizer!" }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Cable Sleeve Braided 2m",
+    "price": 599,
+    "image": "https://images.unsplash.com/photo-1609034227505-5876f6aa4e90?w=500&h=500&fit=crop",
+    "description": "Protective braided cable sleeve",
+    "fullDescription": "2-meter braided cable sleeve for organizing and protecting cables. Expandable design. Perfect for cable management.",
+    "category": "Cables",
+    "stock": 76,
+    "rating": 4.4,
+    "reviews": 156,
+    "specs": ["2 meter length", "Braided design", "Expandable", "Protective", "Multiple colors"],
+    "reviews_data": [
+      { "id": 1, "author": "Olivia V.", "rating": 4, "text": "Great cable organizer!" }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Monitor Privacy Filter",
+    "price": 1299,
+    "image": "https://images.unsplash.com/photo-1587826080692-f439cd0b70da?w=500&h=500&fit=crop",
+    "description": "Privacy screen for monitor protection",
+    "fullDescription": "Screen privacy filter for 22-24 inch monitors. 30-degree viewing angle protection. Reduces blue light. Easy attachment.",
+    "category": "Accessories",
+    "stock": 33,
+    "rating": 4.6,
+    "reviews": 134,
+    "specs": ["22-24 inch fit", "30-degree viewing angle", "Blue light reduction", "Easy attachment", "Anti-glare"],
+    "reviews_data": [
+      { "id": 1, "author": "Peter W.", "rating": 5, "text": "Great privacy filter!" }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "RGB LED Strip 10m",
+    "price": 2599,
+    "image": "https://images.unsplash.com/photo-1565636166375-2bfc52962edc?w=500&h=500&fit=crop",
+    "description": "Smart RGB LED strip for room ambiance",
+    "fullDescription": "10-meter RGB LED strip with 16 million colors. WiFi control via app. Voice control compatible. Durable 3M adhesive.",
+    "category": "Lighting",
+    "stock": 25,
+    "rating": 4.7,
+    "reviews": 198,
+    "specs": ["10 meter length", "16M colors", "WiFi control", "Voice compatible", "3M adhesive"],
+    "reviews_data": [
+      { "id": 1, "author": "Quinn X.", "rating": 5, "text": "Perfect lighting!" }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Phone Tripod Professional",
+    "price": 1999,
+    "image": "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?w=500&h=500&fit=crop",
+    "description": "Sturdy tripod for phone photography",
+    "fullDescription": "Professional phone tripod with adjustable head and height. Supports all smartphone sizes. Compact and lightweight for travel.",
+    "category": "Photography",
+    "stock": 28,
+    "rating": 4.7,
+    "reviews": 167,
+    "specs": ["Adjustable height", "360 degree head", "Lightweight", "Smartphone compatible", "Carrying bag included"],
+    "reviews_data": [
+      { "id": 1, "author": "Rachel Y.", "rating": 5, "text": "Great tripod!" }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Surge Protector 6-Outlet",
+    "price": 899,
+    "image": "https://images.unsplash.com/photo-1609034227505-5876f6aa4e90?w=500&h=500&fit=crop",
+    "description": "Power strip with surge protection",
+    "fullDescription": "6-outlet power strip with surge protection and USB ports. LED indicator. 1.8-meter cord. Protects against power spikes.",
+    "category": "Electronics",
+    "stock": 61,
+    "rating": 4.5,
+    "reviews": 178,
+    "specs": ["6 outlets", "Surge protection", "2 USB ports", "1.8m cord", "LED indicator"],
+    "reviews_data": [
+      { "id": 1, "author": "Sam Z.", "rating": 4, "text": "Good power strip!" }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Smart Power Strip WiFi",
+    "price": 1999,
+    "image": "https://images.unsplash.com/photo-1609034227505-5876f6aa4e90?w=500&h=500&fit=crop",
+    "description": "WiFi-enabled smart power strip",
+    "fullDescription": "Smart power strip with WiFi control. Individual outlet switching via app. Voice control compatible. Energy monitoring.",
+    "category": "Electronics",
+    "stock": 19,
+    "rating": 4.8,
+    "reviews": 145,
+    "specs": ["WiFi control", "Individual outlet control", "Voice compatible", "Energy monitoring", "4 outlets + 2 USB"],
+    "reviews_data": [
+      { "id": 1, "author": "Tina A.", "rating": 5, "text": "Smart convenience!" }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Document Scanner Portable",
+    "price": 3499,
+    "image": "https://images.unsplash.com/photo-1554317098-46b51a2dd749?w=500&h=500&fit=crop",
+    "description": "Portable scanner for documents and photos",
+    "fullDescription": "Handheld portable scanner with USB connectivity. Scans documents and photos in color. OCR software included. Compact and lightweight.",
+    "category": "Electronics",
+    "stock": 15,
+    "rating": 4.6,
+    "reviews": 123,
+    "specs": ["Portable design", "Color scanning", "OCR software", "USB powered", "High resolution"],
+    "reviews_data": [
+      { "id": 1, "author": "Uma B.", "rating": 4, "text": "Good portable scanner!" }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Bluetooth Desk Speaker",
+    "price": 3899,
+    "image": "https://images.unsplash.com/photo-1589003077984-894e133da26d?w=500&h=500&fit=crop",
+    "description": "High-quality desktop Bluetooth speaker",
+    "fullDescription": "Compact desk speaker with rich stereo sound. Bluetooth 5.0 connectivity. 8-hour battery life. USB and 3.5mm jack inputs.",
+    "category": "Audio",
+    "stock": 22,
+    "rating": 4.7,
+    "reviews": 189,
+    "specs": ["Bluetooth 5.0", "Stereo sound", "8-hour battery", "Multiple inputs", "Compact design"],
+    "reviews_data": [
+      { "id": 1, "author": "Vince C.", "rating": 5, "text": "Great desk speaker!" }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Keyboard Mechanical Wireless",
+    "price": 7999,
+    "image": "https://images.unsplash.com/photo-1587829191301-51b40f1eeb6f?w=500&h=500&fit=crop",
+    "description": "Wireless mechanical keyboard with premium switches",
+    "fullDescription": "Premium wireless mechanical keyboard with hot-swappable switches. Programmable keys. 200-hour battery life. Aluminum frame.",
+    "category": "Electronics",
+    "stock": 12,
+    "rating": 4.9,
+    "reviews": 234,
+    "specs": ["Wireless 2.4GHz", "Mechanical switches", "Hot-swappable", "200-hour battery", "Programmable keys"],
+    "reviews_data": [
+      { "id": 1, "author": "Wendy D.", "rating": 5, "text": "Premium keyboard!" }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "USB Hub Extension Cord",
+    "price": 1399,
+    "image": "https://images.unsplash.com/photo-1609034227505-5876f6aa4e90?w=500&h=500&fit=crop",
+    "description": "USB hub with 2-meter extension cord",
+    "fullDescription": "4-port USB hub with 2-meter extension cord. USB 3.0 connectivity. Perfect for reaching USB ports on the back of computers.",
+    "category": "Accessories",
+    "stock": 44,
+    "rating": 4.5,
+    "reviews": 167,
+    "specs": ["4 USB 3.0 ports", "2 meter cord", "Extension design", "Powered", "High speed transfer"],
+    "reviews_data": [
+      { "id": 1, "author": "Xavier E.", "rating": 4, "text": "Handy extension!" }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "HDMI Splitter 1 in 2 Out",
+    "price": 699,
+    "image": "https://images.unsplash.com/photo-1609034227505-5876f6aa4e90?w=500&h=500&fit=crop",
+    "description": "HDMI splitter for dual display setup",
+    "fullDescription": "1-in 2-out HDMI splitter supporting 4K@30Hz. No external power needed. Perfect for dual monitor setup.",
+    "category": "Electronics",
+    "stock": 52,
+    "rating": 4.4,
+    "reviews": 145,
+    "specs": ["1 in, 2 out", "4K@30Hz support", "No power needed", "Compact", "Gold connectors"],
+    "reviews_data": [
+      { "id": 1, "author": "Yara F.", "rating": 4, "text": "Works perfectly!" }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Desk Mat Mousepad Large",
+    "price": 1299,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop",
+    "description": "Large desk mat and mousepad combo",
+    "fullDescription": "Large desk mat (80x40cm) with integrated mousepad. Premium leather surface. Non-slip rubber base. Perfect for gaming and work.",
+    "category": "Accessories",
+    "stock": 39,
+    "rating": 4.6,
+    "reviews": 198,
+    "specs": ["80x40cm size", "Leather surface", "Non-slip base", "Integrated mousepad", "Premium quality"],
+    "reviews_data": [
+      { "id": 1, "author": "Zoe G.", "rating": 5, "text": "Premium desk mat!" }
+    ]
+  }
+]

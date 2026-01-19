@@ -1,53 +1,176 @@
-# Getting Started with Create React App
+# 🛍️ ShopHub Kenya - E-Commerce Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **professional-grade e-commerce platform** built with React and Material-UI, specifically designed for the Kenya market.
 
-## Available Scripts
+## 🌟 Key Features
 
-In the project directory, you can run:
+### Core Shopping
+- ✅ Browse 8+ tech products with high-quality Unsplash images
+- ✅ Advanced filtering (price range, ratings, categories)
+- ✅ 6 sorting options (relevance, price, rating, newest, popularity)
+- ✅ Real-time product search
+- ✅ Quick view modal for fast product preview
+- ✅ Detailed product pages with customer reviews
 
-### `npm start`
+### Shopping & Checkout
+- ✅ Shopping cart with persistence
+- ✅ Wishlist/favorites with persistence
+- ✅ 3-step checkout process (shipping → payment → review)
+- ✅ Form validation with error handling
+- ✅ 3 payment methods (M-Pesa, Card, Bank Transfer)
+- ✅ Free shipping over KES 5,000
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### User Management
+- ✅ User authentication (login/signup)
+- ✅ User profiles and account settings
+- ✅ Order history tracking
+- ✅ Profile editing
+- ✅ User data persistence via localStorage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Promotions & Marketing
+- ✅ 5 coupon codes (SAVE10, SAVE20, FLAT500, WELCOME, REFER100)
+- ✅ Discount calculation (percentage & fixed amounts)
+- ✅ Newsletter signup integration
+- ✅ Customer testimonials section
+- ✅ Trending products showcase
 
-### `npm test`
+### UX/Notifications
+- ✅ Toast notifications for all actions
+- ✅ Responsive design (mobile-first)
+- ✅ Smooth animations and transitions
+- ✅ Professional Material-UI styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Quick Start
 
-### `npm run build`
+```bash
+# Install dependencies
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Start development server
+npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# App opens at http://localhost:3000
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎯 Demo
 
-### `npm run eject`
+**Login Credentials:**
+- Email: `demo@example.com`
+- Password: `demo123`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Try These Coupon Codes:**
+- SAVE10 (10% off)
+- SAVE20 (20% off)
+- FLAT500 (KES 500 off)
+- WELCOME (15% off first-time)
+- REFER100 (KES 100 off)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📖 Routes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Route | Description |
+|-------|-------------|
+| `/` | Home page with features & testimonials |
+| `/products` | Browse products with filters & sorting |
+| `/product/:id` | Detailed product view |
+| `/wishlist` | View favorited items |
+| `/cart` | Shopping cart |
+| `/checkout` | 3-step checkout process |
+| `/order-confirmation` | Order success page |
+| `/login` | Login/signup page |
+| `/account` | User profile & order history |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🏗️ Technology
 
-## Learn More
+- React 18 + Create React App
+- Material-UI v5 (all styling)
+- React Router v6 (routing)
+- React Context API (state management)
+- localStorage (data persistence)
+- Unsplash API (product images)
+- Avataaars API (user avatars)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📚 Documentation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [FEATURES.md](FEATURES.md) - Complete feature list with details
+- [NAVIGATION_GUIDE.md](NAVIGATION_GUIDE.md) - How to use each page
+- [DEVELOPER_DOCS.md](DEVELOPER_DOCS.md) - Technical implementation details
+- [PROJECT_SUMMARY.md](PROJECT_SUMMARY.md) - Project overview
 
-### Code Splitting
+## 📱 Browser Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+✅ Chrome, Firefox, Safari, Edge
+✅ Mobile (iOS & Android)
+✅ Fully responsive design
+
+## 🌍 Kenya Localization
+
+- 💵 Currency: Kenyan Shilling (KES)
+- 📱 Payment: M-Pesa support
+- 🚚 Shipping: Kenya-wide delivery
+- 🏙️ Local references throughout UI
+
+## 📦 Project Structure
+
+```
+src/
+├── components/          # Reusable React components
+├── context/            # React Context providers (6 total)
+├── pages/              # Page components (9 total)
+├── utils/              # Utility functions
+├── App.js              # Main app with routing
+└── index.js            # React entry point
+```
+
+## ✨ Highlights
+
+1. **Smart Filtering** - Price slider, rating dropdown, category filter
+2. **Advanced Sorting** - 6 different sort options
+3. **Discount System** - Real-time coupon application
+4. **User Persistence** - Cart & wishlist saved locally
+5. **Quick View** - Modal preview without navigation
+6. **Order History** - Track past purchases
+7. **Newsletter** - Email signup integration
+8. **Testimonials** - Social proof with customer reviews
+
+## 🎁 Try These Features
+
+1. Login with demo credentials
+2. Apply coupon code SAVE10 at checkout
+3. Add items to wishlist
+4. Use price slider to filter products
+5. Sort by rating or price
+6. Preview product with Quick View
+7. View order history in account page
+
+## 🔐 Note
+
+This is a **demo/prototype** version. For production deployment:
+- Implement real backend authentication
+- Connect to actual payment gateway
+- Add HTTPS/SSL encryption
+- Implement proper security measures
+
+## 🚀 Production Readiness
+
+**Completed Features:**
+- ✅ Complete product catalog with filtering
+- ✅ Shopping cart with persistence
+- ✅ User authentication flow
+- ✅ Checkout process
+- ✅ Coupon system
+- ✅ Order management
+- ✅ Wishlist functionality
+- ✅ Newsletter integration
+- ✅ Professional UI/UX
+- ✅ Responsive design
+
+**Status:** Beta Ready (v1.0.0)
+
+---
+
+For more information, see the documentation files included in the project.
+
+**Built with ❤️ for Kenya e-commerce**
 
 ### Analyzing the Bundle Size
 
