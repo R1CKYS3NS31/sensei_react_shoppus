@@ -72,7 +72,7 @@ const ProductDetail = () => {
         {/* Product Details */}
         <Grid container spacing={4} sx={{ mb: 8 }}>
           {/* Image Gallery */}
-          <Grid size={{ xs: 12, md: 5}}>
+          <Grid size={{ xs: 12, md: 5 }}>
             <Card sx={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}>
               <Box
                 component="img"

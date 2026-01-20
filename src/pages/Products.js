@@ -1,10 +1,15 @@
 import React, { useContext, useState, useMemo } from 'react';
-import { Container, Grid, Box, Typography, TextField, FormControl, InputLabel, Select, MenuItem, Chip, Slider, Pagination, CircularProgress } from '@mui/material';
+import { Container, Grid, Box, Typography, TextField, FormControl, InputLabel, Select, MenuItem, Chip, Slider, Pagination, CircularProgress, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { ProductContext } from '../context/ProductContext';
 import ProductCard from '../components/ProductCard';
 import { Search } from '@mui/icons-material';
 
 const Products = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+  
   const { products, loading, getCategories } = useContext(ProductContext);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -74,14 +79,15 @@ const Products = () => {
     <Box sx={{ backgroundColor: '#fafafa', minHeight: 'calc(100vh - 64px - 200px)', paddingY: 6 }}>
       <Container>
         {/* Header */}
-        <Box sx={{ marginBottom: 6 }}>
+        <Box sx={{ marginBottom: 4 }}>
           <Typography 
             variant="h3" 
             gutterBottom 
             sx={{ 
               fontWeight: '700',
               color: '#1a1a1a',
-              mb: 2
+              mb: 2,
+              fontSize: isMobile ? '1.8rem' : isTablet ? '2.2rem' : '2.5rem'
             }}
           >
             Our Products
@@ -91,7 +97,7 @@ const Products = () => {
             color="textSecondary"
             sx={{
               fontWeight: '400',
-              fontSize: '1rem'
+              fontSize: isMobile ? '0.9rem' : '1rem'
             }}
           >
             Discover our curated selection of {products.length} premium electronics and accessories
@@ -99,7 +105,7 @@ const Products = () => {
         </Box>
 
         {/* Filters Section */}
-        <Grid container spacing={3} sx={{ mb: 4 }}>
+        <Grid container spacing={{ xs: 1.5, sm: 2, md: 3 }} sx={{ mb: 4 }}>
           {/* Search */}
           <Grid size={{ xs: 12, sm: 6, md: 3 }}>
             <TextField
@@ -274,27 +280,16 @@ const Products = () => {
               </Typography>
             </Box>
 
-            {/* Grid - Properly organized with fixed item sizes */}
+            {/* Products Grid - Mobile Responsive */}
             <Grid 
               container 
-              spacing={3} 
-              sx={{ 
-                mb: 5,
-                display: 'grid',
-                gridTemplateColumns: {
-                  xs: '1fr',
-                  sm: 'repeat(2, 1fr)',
-                  md: 'repeat(3, 1fr)',
-                  lg: 'repeat(4, 1fr)',
-                },
-                gap: '24px',
-                width: '100%'
-              }}
+              spacing={{ xs: 1.5, sm: 2, md: 3 }}
+              sx={{ mb: 5 }}
             >
               {paginatedProducts.map(product => (
-                <Box key={product.id} sx={{ display: 'flex' }}>
+                <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={product.id}>
                   <ProductCard product={product} />
-                </Box>
+                </Grid>
               ))}
             </Grid>
 

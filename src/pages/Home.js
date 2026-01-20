@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { Container, Box, Typography, Button, Grid, Card, CardContent, TextField, Chip } from '@mui/material';
+import { Container, Box, Typography, Button, Grid, Card, CardContent, TextField, Chip, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
 import { LocalShipping, Lock, Headset, Email, ArrowRight, LocalFireDepartment, Star, TrendingUp } from '@mui/icons-material';
 import { ProductContext } from '../context/ProductContext';
@@ -8,6 +9,11 @@ import ProductCard from '../components/ProductCard';
 import TestimonialsSection from '../components/TestimonialsSection';
 
 const Home = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+  const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
+  
   const { products } = useContext(ProductContext);
   const { showNotification } = useContext(NotificationContext);
   const [email, setEmail] = useState('');
@@ -57,7 +63,7 @@ const Home = () => {
       <Box sx={{
         background: 'linear-gradient(135deg, #0d47a1 0%, #1565c0 50%, #42a5f5 100%)',
         color: 'white',
-        padding: { xs: '80px 20px', md: '120px 20px' },
+        padding: isMobile ? '60px 20px' : isTablet ? '80px 20px' : '120px 20px',
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
@@ -104,7 +110,7 @@ const Home = () => {
             gutterBottom 
             sx={{ 
               fontWeight: '900',
-              fontSize: { xs: '2.5rem', md: '3.8rem' },
+              fontSize: isMobile ? '1.8rem' : isTablet ? '2.8rem' : '3.8rem',
               mb: 2,
               letterSpacing: '-1px',
               animation: 'fadeInUp 0.8s ease-out',
@@ -120,7 +126,7 @@ const Home = () => {
             variant="h5" 
             sx={{ 
               marginBottom: 5,
-              fontSize: { xs: '1rem', md: '1.4rem' },
+              fontSize: isMobile ? '0.9rem' : isTablet ? '1.1rem' : '1.4rem',
               fontWeight: '300',
               letterSpacing: '0.5px',
               opacity: 0.95,
@@ -133,7 +139,7 @@ const Home = () => {
           >
             Premium tech products with fast delivery, secure payment & 24/7 support
           </Typography>
-          <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap', animation: 'fadeInUp 0.8s ease-out 0.4s both' }}>
+          <Box sx={{ display: 'flex', gap: isMobile ? 1 : 2, justifyContent: 'center', flexWrap: 'wrap', animation: 'fadeInUp 0.8s ease-out 0.4s both', flexDirection: isMobile ? 'column' : 'row' }}>
             <Button 
               variant="contained" 
               color="warning" 
@@ -141,14 +147,16 @@ const Home = () => {
               component={RouterLink} 
               to="/products"
               endIcon={<ArrowRight />}
+              fullWidth={isMobile}
               sx={{
-                padding: '14px 45px',
-                fontSize: '1.1rem',
+                padding: isMobile ? '12px 30px' : '14px 45px',
+                fontSize: isMobile ? '0.95rem' : '1.1rem',
                 fontWeight: '600',
                 textTransform: 'none',
                 borderRadius: '50px',
                 boxShadow: '0 8px 16px rgba(0,0,0,0.2)',
                 transition: 'all 0.3s ease',
+                minHeight: isMobile ? '48px' : 'auto',
                 '&:hover': {
                   transform: 'translateY(-2px)',
                   boxShadow: '0 12px 24px rgba(0,0,0,0.3)',
@@ -160,14 +168,16 @@ const Home = () => {
             <Button 
               variant="outlined" 
               size="large"
+              fullWidth={isMobile}
               sx={{
-                padding: '14px 45px',
-                fontSize: '1.1rem',
+                padding: isMobile ? '12px 30px' : '14px 45px',
+                fontSize: isMobile ? '0.95rem' : '1.1rem',
                 fontWeight: '600',
                 textTransform: 'none',
                 borderRadius: '50px',
                 borderColor: 'white',
                 color: 'white',
+                minHeight: isMobile ? '48px' : 'auto',
                 transition: 'all 0.3s ease',
                 '&:hover': {
                   backgroundColor: 'rgba(255,255,255,0.1)',
@@ -182,8 +192,8 @@ const Home = () => {
       </Box>
 
       {/* Stats Section */}
-      <Container sx={{ paddingY: 8 }}>
-        <Grid container spacing={3}>
+      <Container sx={{ paddingY: isMobile ? 6 : 8 }}>
+        <Grid container spacing={isMobile ? 2 : 3}>
           {[
             { number: '50+', label: 'Premium Products', icon: '📦' },
             { number: '10K+', label: 'Happy Customers', icon: '😊' },
@@ -191,14 +201,14 @@ const Home = () => {
             { number: '2H', label: 'Avg Delivery', icon: '🚚' }
           ].map((stat, index) => (
             <Grid size={{ xs: 6, sm: 3 }} key={index}>
-              <Box sx={{ textAlign: 'center', py: 2 }}>
-                <Typography variant="h4" sx={{ fontSize: '2rem', mb: 1 }}>
+              <Box sx={{ textAlign: 'center', py: isMobile ? 1 : 2 }}>
+                <Typography variant="h4" sx={{ fontSize: isMobile ? '1.3rem' : isTablet ? '1.8rem' : '2rem', mb: 1 }}>
                   {stat.icon}
                 </Typography>
-                <Typography variant="h5" sx={{ fontWeight: '700', color: '#0d47a1', mb: 0.5 }}>
+                <Typography variant="h5" sx={{ fontWeight: '700', color: '#0d47a1', mb: 0.5, fontSize: isMobile ? '1rem' : isTablet ? '1.3rem' : '1.5rem' }}>
                   {stat.number}
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#666', fontWeight: '500' }}>
+                <Typography variant="body2" sx={{ color: '#666', fontWeight: '500', fontSize: isMobile ? '0.7rem' : '0.875rem' }}>
                   {stat.label}
                 </Typography>
               </Box>
@@ -208,20 +218,21 @@ const Home = () => {
       </Container>
 
       {/* Features Section */}
-      <Container sx={{ paddingY: 8 }}>
+      <Container sx={{ paddingY: isMobile ? 6 : 8 }}>
         <Typography 
           variant="h4" 
           gutterBottom 
           sx={{ 
             textAlign: 'center',
             fontWeight: '700',
-            marginBottom: 6,
-            color: '#1a1a1a'
+            marginBottom: isMobile ? 4 : 6,
+            color: '#1a1a1a',
+            fontSize: isMobile ? '1.5rem' : isTablet ? '2rem' : '2.2rem'
           }}
         >
           Why Choose ShopHub
         </Typography>
-        <Grid container spacing={4}>
+        <Grid container spacing={isMobile ? 2 : 4}>
           <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <Card sx={{
               height: '100%',
@@ -245,12 +256,12 @@ const Home = () => {
                 transform: 'translateY(-4px)'
               }
             }}>
-              <CardContent sx={{ textAlign: 'center', py: 4 }}>
-                <LocalShipping sx={{ fontSize: '3rem', color: '#0d47a1', mb: 2 }} />
-                <Typography variant="h6" gutterBottom sx={{ fontWeight: '600' }}>
+              <CardContent sx={{ textAlign: 'center', py: isMobile ? 2.5 : 4, px: isMobile ? 1 : 2 }}>
+                <LocalShipping sx={{ fontSize: isMobile ? '1.8rem' : isTablet ? '2.4rem' : '3rem', color: '#0d47a1', mb: 2 }} />
+                <Typography variant="h6" gutterBottom sx={{ fontWeight: '600', fontSize: isMobile ? '0.9rem' : isTablet ? '1rem' : '1.1rem' }}>
                   Fast Shipping
                 </Typography>
-                <Typography variant="body2" color="textSecondary">
+                <Typography variant="body2" color="textSecondary" sx={{ fontSize: isMobile ? '0.75rem' : '0.875rem' }}>
                   Same-day delivery in Nairobi & express shipping across Kenya
                 </Typography>
               </CardContent>
@@ -279,12 +290,12 @@ const Home = () => {
                 transform: 'translateY(-4px)'
               }
             }}>
-              <CardContent sx={{ textAlign: 'center', py: 4 }}>
-                <Lock sx={{ fontSize: '3rem', color: '#0d47a1', mb: 2 }} />
-                <Typography variant="h6" gutterBottom sx={{ fontWeight: '600' }}>
+              <CardContent sx={{ textAlign: 'center', py: isMobile ? 2.5 : 4, px: isMobile ? 1 : 2 }}>
+                <Lock sx={{ fontSize: isMobile ? '1.8rem' : isTablet ? '2.4rem' : '3rem', color: '#0d47a1', mb: 2 }} />
+                <Typography variant="h6" gutterBottom sx={{ fontWeight: '600', fontSize: isMobile ? '0.9rem' : isTablet ? '1rem' : '1.1rem' }}>
                   Secure Payment
                 </Typography>
-                <Typography variant="body2" color="textSecondary">
+                <Typography variant="body2" color="textSecondary" sx={{ fontSize: isMobile ? '0.75rem' : '0.875rem' }}>
                   M-Pesa, card, bank transfer & more payment options available
                 </Typography>
               </CardContent>
@@ -313,12 +324,12 @@ const Home = () => {
                 transform: 'translateY(-4px)'
               }
             }}>
-              <CardContent sx={{ textAlign: 'center', py: 4 }}>
-                <Headset sx={{ fontSize: '3rem', color: '#0d47a1', mb: 2 }} />
-                <Typography variant="h6" gutterBottom sx={{ fontWeight: '600' }}>
+              <CardContent sx={{ textAlign: 'center', py: isMobile ? 2.5 : 4, px: isMobile ? 1 : 2 }}>
+                <Headset sx={{ fontSize: isMobile ? '1.8rem' : isTablet ? '2.4rem' : '3rem', color: '#0d47a1', mb: 2 }} />
+                <Typography variant="h6" gutterBottom sx={{ fontWeight: '600', fontSize: isMobile ? '0.9rem' : isTablet ? '1rem' : '1.1rem' }}>
                   24/7 Support
                 </Typography>
-                <Typography variant="body2" color="textSecondary">
+                <Typography variant="body2" color="textSecondary" sx={{ fontSize: isMobile ? '0.75rem' : '0.875rem' }}>
                   Dedicated customer service team ready to help anytime
                 </Typography>
               </CardContent>
@@ -331,7 +342,7 @@ const Home = () => {
       <Box sx={{
         background: 'linear-gradient(135deg, #ff6f00 0%, #ff8f00 50%, #ff6f00 100%)',
         color: 'white',
-        padding: '40px 20px',
+        padding: isMobile ? '25px 20px' : isTablet ? '30px 20px' : '40px 20px',
         marginY: 6,
         borderRadius: '12px',
         textAlign: 'center',
@@ -340,13 +351,13 @@ const Home = () => {
       }}>
         <Container>
           <Box sx={{ position: 'relative', zIndex: 1 }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, mb: 2 }}>
-              <LocalFireDepartment sx={{ fontSize: '2rem' }} />
-              <Typography variant="h5" sx={{ fontWeight: '700' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, mb: 2, flexWrap: 'wrap', flexDirection: isMobile ? 'column' : 'row' }}>
+              <LocalFireDepartment sx={{ fontSize: isMobile ? '1.2rem' : '2rem' }} />
+              <Typography variant="h5" sx={{ fontWeight: '700', fontSize: isMobile ? '1rem' : isTablet ? '1.3rem' : '1.5rem' }}>
                 Flash Sale This Week
               </Typography>
             </Box>
-            <Typography variant="body1" sx={{ mb: 2, opacity: 0.95 }}>
+            <Typography variant="body1" sx={{ mb: 2, opacity: 0.95, fontSize: isMobile ? '0.85rem' : '1rem' }}>
               Save up to 40% on selected tech products. Hurry, limited stock!
             </Typography>
             <Button 
@@ -357,7 +368,9 @@ const Home = () => {
                 fontWeight: '700',
                 textTransform: 'none',
                 borderRadius: '50px',
-                padding: '12px 35px',
+                padding: isMobile ? '10px 25px' : '12px 35px',
+                fontSize: isMobile ? '0.9rem' : '1rem',
+                minHeight: isMobile ? '44px' : 'auto',
                 '&:hover': {
                   backgroundColor: '#f5f5f5'
                 }
@@ -370,11 +383,11 @@ const Home = () => {
       </Box>
 
       {/* Recommended Products Section */}
-      <Container sx={{ paddingY: 8 }}>
-        <Box sx={{ mb: 6 }}>
+      <Container sx={{ paddingY: isMobile ? 6 : 8 }}>
+        <Box sx={{ mb: isMobile ? 4 : 6 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, mb: 1 }}>
             <TrendingUp sx={{ color: '#ff6f00' }} />
-            <Typography variant="caption" sx={{ color: '#ff6f00', fontWeight: '700', textTransform: 'uppercase' }}>
+            <Typography variant="caption" sx={{ color: '#ff6f00', fontWeight: '700', textTransform: 'uppercase', fontSize: isMobile ? '0.7rem' : '0.75rem' }}>
               Popular This Season
             </Typography>
           </Box>
@@ -385,7 +398,8 @@ const Home = () => {
               textAlign: 'center',
               fontWeight: '700',
               marginBottom: 1,
-              color: '#1a1a1a'
+              color: '#1a1a1a',
+              fontSize: isMobile ? '1.5rem' : isTablet ? '2rem' : '2.5rem'
             }}
           >
             Trending Now
@@ -396,33 +410,24 @@ const Home = () => {
               textAlign: 'center',
               color: '#666',
               marginBottom: 4,
-              fontSize: '1rem'
+              fontSize: isMobile ? '0.85rem' : '1rem'
             }}
           >
             Discover the most loved tech products by our community
           </Typography>
         </Box>
         
-        <Box 
-          sx={{ 
-            display: 'grid',
-            gridTemplateColumns: {
-              xs: '1fr',
-              sm: 'repeat(2, 1fr)',
-              md: 'repeat(4, 1fr)',
-              lg: 'repeat(4, 1fr)',
-            },
-            gap: '24px',
-            width: '100%',
-            mb: 4
-          }}
+        <Grid 
+          container
+          spacing={{ xs: 1.5, sm: 2, md: 3 }}
+          sx={{ mb: 4 }}
         >
           {products.slice(0, 8).map((product) => (
-            <Box key={product.id} sx={{ display: 'flex' }}>
+            <Grid size={{ xs: 12, sm: 6, md: 3, lg: 3 }} key={product.id}>
               <ProductCard product={product} />
-            </Box>
+            </Grid>
           ))}
-        </Box>
+        </Grid>
 
         <Box sx={{ textAlign: 'center', mt: 6 }}>
           <Button 
@@ -452,7 +457,7 @@ const Home = () => {
       </Container>
 
       {/* Categories Showcase Section */}
-      <Box sx={{ backgroundColor: '#f5f5f5', paddingY: 8 }}>
+      <Box sx={{ backgroundColor: '#f5f5f5', paddingY: isMobile ? 6 : 8 }}>
         <Container>
           <Typography 
             variant="h4" 
@@ -460,13 +465,14 @@ const Home = () => {
             sx={{ 
               textAlign: 'center',
               fontWeight: '700',
-              marginBottom: 6,
-              color: '#1a1a1a'
+              marginBottom: isMobile ? 4 : 6,
+              color: '#1a1a1a',
+              fontSize: isMobile ? '1.5rem' : isTablet ? '2rem' : '2.2rem'
             }}
           >
             Shop by Category
           </Typography>
-          <Grid container spacing={3}>
+          <Grid container spacing={isMobile ? 2 : 3}>
             {[
               { name: 'Electronics', icon: '📱', color: '#0d47a1', desc: 'Phones & Devices' },
               { name: 'Audio', icon: '🎧', color: '#1565c0', desc: 'Headphones & Speakers' },
@@ -489,19 +495,20 @@ const Home = () => {
                 }}>
                   <CardContent sx={{ 
                     textAlign: 'center', 
-                    py: 5,
+                    py: isMobile ? 3 : 5,
+                    px: isMobile ? 1 : 2,
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center'
                   }}>
-                    <Box sx={{ fontSize: '3rem', mb: 1 }}>
+                    <Box sx={{ fontSize: isMobile ? '2rem' : '3rem', mb: 1 }}>
                       {category.icon}
                     </Box>
-                    <Typography variant="h6" sx={{ fontWeight: '700', color: '#1a1a1a', mb: 0.5 }}>
+                    <Typography variant="h6" sx={{ fontWeight: '700', color: '#1a1a1a', mb: 0.5, fontSize: isMobile ? '0.95rem' : '1.1rem' }}>
                       {category.name}
                     </Typography>
-                    <Typography variant="caption" sx={{ color: '#999', mb: 2 }}>
+                    <Typography variant="caption" sx={{ color: '#999', mb: 2, fontSize: isMobile ? '0.7rem' : '0.75rem' }}>
                       {category.desc}
                     </Typography>
                     <Button 
@@ -510,6 +517,7 @@ const Home = () => {
                         textTransform: 'none',
                         color: category.color,
                         fontWeight: '600',
+                        fontSize: isMobile ? '0.8rem' : '0.85rem',
                         '&:hover': {
                           backgroundColor: `${category.color}10`
                         }
@@ -532,17 +540,18 @@ const Home = () => {
       <Box sx={{
         background: 'linear-gradient(135deg, #1565c0 0%, #0d47a1 100%)',
         color: 'white',
-        padding: '60px 20px'
+        padding: isMobile ? '40px 20px' : '60px 20px'
       }}>
         <Container maxWidth="md">
-          <Grid container spacing={4} alignItems="center">
+          <Grid container spacing={isMobile ? 2 : 4} alignItems="center">
             <Grid size={{ xs: 12, md: 6 }}>
               <Typography 
                 variant="h4" 
                 gutterBottom 
                 sx={{ 
                   fontWeight: '700',
-                  marginBottom: 2
+                  marginBottom: 2,
+                  fontSize: isMobile ? '1.5rem' : '2rem'
                 }}
               >
                 Stay Updated
@@ -550,7 +559,7 @@ const Home = () => {
               <Typography 
                 variant="body1" 
                 sx={{ 
-                  fontSize: '1rem',
+                  fontSize: isMobile ? '0.9rem' : '1rem',
                   lineHeight: '1.6',
                   opacity: 0.95
                 }}
@@ -559,7 +568,7 @@ const Home = () => {
               </Typography>
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
-              <Box sx={{ display: 'flex', gap: 1 }}>
+              <Box sx={{ display: 'flex', gap: 1, flexDirection: isMobile ? 'column' : 'row' }}>
                 <TextField
                   fullWidth
                   placeholder="Enter your email"
@@ -598,14 +607,17 @@ const Home = () => {
                   variant="contained"
                   onClick={handleNewsletterSignup}
                   disabled={isSubscribing}
+                  fullWidth={isMobile}
                   sx={{
                     backgroundColor: '#ff6f00',
                     color: 'white',
-                    padding: '12px 30px',
+                    padding: isMobile ? '14px 20px' : '12px 30px',
                     fontWeight: '600',
                     borderRadius: '8px',
                     textTransform: 'none',
-                    whiteSpace: 'nowrap',
+                    whiteSpace: isMobile ? 'wrap' : 'nowrap',
+                    fontSize: isMobile ? '0.9rem' : '1rem',
+                    minHeight: isMobile ? '48px' : 'auto',
                     '&:hover': {
                       backgroundColor: '#e65100'
                     },

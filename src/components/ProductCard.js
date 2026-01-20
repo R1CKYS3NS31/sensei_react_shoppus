@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { Card, CardContent, CardActions, Typography, Button, Box, CardMedia, Chip, Rating, IconButton } from '@mui/material';
+import { Card, CardContent, CardActions, Typography, Button, Box, CardMedia, Chip, Rating, IconButton, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { CartContext } from '../context/CartContext';
 import { WishlistContext } from '../context/WishlistContext';
 import { NotificationContext } from '../context/NotificationContext';
@@ -9,6 +10,11 @@ import { ShoppingCart, FavoriteBorder, Favorite, Visibility } from '@mui/icons-m
 import QuickViewModal from './QuickViewModal';
 
 const ProductCard = ({ product }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+  const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
+  
   const { addToCart } = useContext(CartContext);
   const { isInWishlist, toggleWishlist } = useContext(WishlistContext);
   const { showNotification } = useContext(NotificationContext);
@@ -45,17 +51,17 @@ const ProductCard = ({ product }) => {
         height: '100%', 
         display: 'flex', 
         flexDirection: 'column',
-        borderRadius: '12px',
+        borderRadius: isMobile ? '8px' : '12px',
         overflow: 'hidden',
         transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+        boxShadow: isMobile ? '0 1px 4px rgba(0,0,0,0.06)' : '0 2px 8px rgba(0,0,0,0.08)',
         textDecoration: 'none',
         color: 'inherit',
         position: 'relative',
         border: '1px solid #f0f0f0',
         '&:hover': {
-          transform: 'translateY(-12px)',
-          boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+          transform: isMobile ? 'translateY(-4px)' : 'translateY(-12px)',
+          boxShadow: isMobile ? '0 8px 16px rgba(0,0,0,0.1)' : '0 20px 40px rgba(0,0,0,0.15)',
         }
       }}
     >
@@ -82,7 +88,7 @@ const ProductCard = ({ product }) => {
         )}
       </IconButton>
 
-      <Box sx={{ position: 'relative', overflow: 'hidden', backgroundColor: '#f5f5f5', height: '280px' }}>
+      <Box sx={{ position: 'relative', overflow: 'hidden', backgroundColor: '#f5f5f5', height: isMobile ? '200px' : isTablet ? '240px' : '280px' }}>
         <CardMedia
           component="img"
           height="280"
@@ -131,8 +137,8 @@ const ProductCard = ({ product }) => {
           }}
         />
       </Box>
-      <CardContent sx={{ flexGrow: 1, pb: 1 }}>
-        <Typography gutterBottom variant="h6" component="div" sx={{ fontWeight: '600', mb: 1 }}>
+      <CardContent sx={{ flexGrow: 1, pb: 1, px: isMobile ? 1 : 2, py: isMobile ? 1.5 : 2 }}>
+        <Typography gutterBottom variant="h6" component="div" sx={{ fontWeight: '600', mb: 1, fontSize: isMobile ? '0.9rem' : isTablet ? '1rem' : '1.1rem', lineHeight: 1.4 }}>
           {product.name}
         </Typography>
         
@@ -144,34 +150,36 @@ const ProductCard = ({ product }) => {
           </Typography>
         </Box>
 
-        <Typography variant="body2" color="textSecondary" sx={{ minHeight: '40px', mb: 2, fontSize: '0.9rem' }}>
+        <Typography variant="body2" color="textSecondary" sx={{ minHeight: isMobile ? '30px' : '40px', mb: 2, fontSize: isMobile ? '0.75rem' : isTablet ? '0.8rem' : '0.9rem', lineHeight: 1.4 }}>
           {product.description}
         </Typography>
         
         {/* Stock indicator */}
-        <Typography variant="caption" sx={{ color: product.stock > 5 ? '#4caf50' : '#ff9800', fontWeight: '600', mb: 1, display: 'block' }}>
+        <Typography variant="caption" sx={{ color: product.stock > 5 ? '#4caf50' : '#ff9800', fontWeight: '600', mb: 1, display: 'block', fontSize: isMobile ? '0.7rem' : '0.8rem' }}>
           {product.stock > 5 ? '✓ In Stock' : `Only ${product.stock} left`}
         </Typography>
 
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Typography variant="h6" color="primary" sx={{ fontWeight: '700', fontSize: '1.25rem' }}>
+          <Typography variant="h6" color="primary" sx={{ fontWeight: '700', fontSize: isMobile ? '0.95rem' : isTablet ? '1.1rem' : '1.25rem' }}>
             {formatCurrency(product.price)}
           </Typography>
         </Box>
       </CardContent>
-      <CardActions sx={{ pt: 0, gap: 1, flexWrap: 'wrap' }}>
+      <CardActions sx={{ pt: 0, gap: isMobile ? 0.5 : 1, flexWrap: 'wrap', flexDirection: isMobile ? 'column' : 'row', px: isMobile ? 1 : 2, pb: isMobile ? 1.5 : 2 }}>
         <Button
           variant="contained"
           startIcon={<ShoppingCart />}
+          fullWidth={isMobile}
           sx={{
             background: 'linear-gradient(135deg, #0d47a1 0%, #1565c0 100%)',
             color: 'white',
             fontWeight: '700',
-            flex: 1,
+            flex: isMobile ? 'unset' : 1,
             textTransform: 'none',
-            fontSize: '0.95rem',
-            minWidth: '150px',
-            py: 1.2,
+            fontSize: isMobile ? '0.8rem' : '0.95rem',
+            minWidth: isMobile ? '100%' : '120px',
+            py: isMobile ? 1.5 : 1.2,
+            minHeight: isMobile ? '48px' : 'auto',
             borderRadius: '8px',
             transition: 'all 0.3s ease',
             '&:hover': {
@@ -192,13 +200,16 @@ const ProductCard = ({ product }) => {
           variant="outlined"
           size="small"
           startIcon={<Visibility />}
+          fullWidth={isMobile}
           onClick={handleQuickView}
           sx={{
             textTransform: 'none',
             fontWeight: '700',
-            flex: 1,
-            minWidth: '100px',
-            py: 1.2,
+            flex: isMobile ? 'unset' : 1,
+            minWidth: isMobile ? '100%' : '80px',
+            py: isMobile ? 1.5 : 1.2,
+            minHeight: isMobile ? '48px' : 'auto',
+            fontSize: isMobile ? '0.8rem' : '0.95rem',
             borderRadius: '8px',
             borderColor: '#0d47a1',
             color: '#0d47a1',
