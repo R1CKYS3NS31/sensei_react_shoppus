@@ -163,7 +163,7 @@ const OrderConfirmation = () => {
             Need help? Contact our support team
           </Typography>
           <Typography variant="h6" sx={{ fontWeight: '700', color: '#0d47a1' }}>
-            📧 support@shophub.ke | 📱 +254 (0) 712 345678
+            📧 support@shoppus.ke | 📱 +254 (0) 712 345678
           </Typography>
         </Box>
       </Container>

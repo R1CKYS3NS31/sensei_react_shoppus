@@ -11,7 +11,7 @@ const TestimonialsSection = () => {
       city: 'Nairobi',
       image: 'https://api.avataaars.io/?avatarStyle=Circle&topType=LongHairBun&facialHairType=Blank&clotheType=ShirtScoopNeck&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=light',
       rating: 5,
-      text: 'ShopHub Kenya offers the best prices and fastest delivery in Kenya. I\'ve ordered multiple times and never been disappointed!',
+      text: 'Shoppus Kenya offers the best prices and fastest delivery in Kenya. I\'ve ordered multiple times and never been disappointed!',
     },
     {
       id: 2,
@@ -70,7 +70,7 @@ const TestimonialsSection = () => {
             fontWeight: '500'
           }}
         >
-          Thousands of satisfied customers trust ShopHub Kenya for their tech purchases and reliable service
+          Thousands of satisfied customers trust Shoppus Kenya for their tech purchases and reliable service
         </Typography>
 
         <Grid container spacing={3}>

@@ -69,7 +69,7 @@ const Header = () => {
             }
           }}
         >
-          🛍️ ShopHub
+          🛍️ Shoppus
         </Typography>
         
         {/* Search Bar */}

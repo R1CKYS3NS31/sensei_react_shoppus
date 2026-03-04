@@ -1,4 +1,4 @@
-# 🛍️ ShopHub Kenya - E-Commerce Platform
+# 🛍️ Shoppus Kenya - E-Commerce Platform
 
 A **professional-grade e-commerce platform** built with React and Material-UI, specifically designed for the Kenya market.
 

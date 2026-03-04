@@ -151,7 +151,7 @@ const Login = () => {
               position: 'relative',
               zIndex: 1
             }}>
-              🛍️ ShopHub
+              🛍️ Shoppus
             </Typography>
             <Typography variant="body1" sx={{ 
               opacity: 0.95,
@@ -400,7 +400,7 @@ const Login = () => {
                     mb: 3,
                     fontSize: '0.9rem'
                   }}>
-                    Join ShopHub for the best shopping experience
+                    Join Shoppus for the best shopping experience
                   </Typography>
                   
                   <Grid container spacing={2.5}>

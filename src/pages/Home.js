@@ -96,7 +96,7 @@ const Home = () => {
       }}>
         <Container sx={{ position: 'relative', zIndex: 1 }}>
           <Chip 
-            label="✨ Welcome to ShopHub Kenya" 
+            label="✨ Welcome to Shoppus Kenya" 
             variant="outlined"
             sx={{ 
               color: 'white',
@@ -230,7 +230,7 @@ const Home = () => {
             fontSize: isMobile ? '1.5rem' : isTablet ? '2rem' : '2.2rem'
           }}
         >
-          Why Choose ShopHub
+          Why Choose Shoppus
         </Typography>
         <Grid container spacing={isMobile ? 2 : 4}>
           <Grid size={{ xs: 12, sm: 6, md: 4 }}>
