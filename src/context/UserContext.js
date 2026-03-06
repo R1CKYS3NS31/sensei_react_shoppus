@@ -6,7 +6,6 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [orderHistory, setOrderHistory] = useState([]);
-  const [initialized, setInitialized] = useState(false);
 
   // Load user data from localStorage on mount
   useEffect(() => {
@@ -31,7 +30,7 @@ export const UserProvider = ({ children }) => {
       }
     }
     
-    setInitialized(true);
+    // initialization complete
   }, []);
 
   const login = useCallback((email, password) => {

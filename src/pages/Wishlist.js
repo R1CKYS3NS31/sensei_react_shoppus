@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Container, Box, Typography, Button, Grid, Card, CardContent, Chip } from '@mui/material';
+import { Container, Box, Typography, Button, Card, Chip } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { WishlistContext } from '../context/WishlistContext';
 import ProductCard from '../components/ProductCard';

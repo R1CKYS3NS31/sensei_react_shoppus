@@ -2,19 +2,19 @@ import React, { createContext, useState, useCallback } from 'react';
 
 export const DiscountContext = createContext();
 
+// Keep coupons in module scope so their identity is stable
+const validCoupons = {
+  'SAVE10': { code: 'SAVE10', discount: 0.10, type: 'percentage', name: '10% Off Order' },
+  'SAVE20': { code: 'SAVE20', discount: 0.20, type: 'percentage', name: '20% Off Order' },
+  'FLAT500': { code: 'FLAT500', discount: 500, type: 'fixed', name: 'KES 500 Off' },
+  'WELCOME': { code: 'WELCOME', discount: 0.15, type: 'percentage', name: '15% First-Time Buyer' },
+  'REFER100': { code: 'REFER100', discount: 100, type: 'fixed', name: 'KES 100 Referral Bonus' },
+};
+
 export const DiscountProvider = ({ children }) => {
   const [appliedCoupon, setAppliedCoupon] = useState(null);
   const [discountAmount, setDiscountAmount] = useState(0);
   const [errorMessage, setErrorMessage] = useState('');
-
-  // Sample coupons database
-  const validCoupons = {
-    'SAVE10': { code: 'SAVE10', discount: 0.10, type: 'percentage', name: '10% Off Order' },
-    'SAVE20': { code: 'SAVE20', discount: 0.20, type: 'percentage', name: '20% Off Order' },
-    'FLAT500': { code: 'FLAT500', discount: 500, type: 'fixed', name: 'KES 500 Off' },
-    'WELCOME': { code: 'WELCOME', discount: 0.15, type: 'percentage', name: '15% First-Time Buyer' },
-    'REFER100': { code: 'REFER100', discount: 100, type: 'fixed', name: 'KES 100 Referral Bonus' },
-  };
 
   const applyCoupon = useCallback((code, subtotal) => {
     const trimmedCode = code.trim().toUpperCase();

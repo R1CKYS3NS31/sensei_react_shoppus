@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Container, Box, Typography, Button, Grid, Card, CardContent, TextField, Chip, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
-import { LocalShipping, Lock, Headset, Email, ArrowRight, LocalFireDepartment, Star, TrendingUp } from '@mui/icons-material';
+import { LocalShipping, Lock, Headset, Email, ArrowRight, LocalFireDepartment, TrendingUp } from '@mui/icons-material';
 import { ProductContext } from '../context/ProductContext';
 import { NotificationContext } from '../context/NotificationContext';
 import ProductCard from '../components/ProductCard';
@@ -12,7 +12,6 @@ const Home = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
-  const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
   
   const { products } = useContext(ProductContext);
   const { showNotification } = useContext(NotificationContext);

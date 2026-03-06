@@ -1,10 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Container, Box, Typography, Button, TextField, Grid, Card, CardContent, Divider, Stepper, Step, StepLabel, Alert, Chip } from '@mui/material';
+import { Container, Box, Typography, Button, TextField, Grid, Card, CardContent, Divider, Stepper, Step, StepLabel } from '@mui/material';
 import { CartContext } from '../context/CartContext';
 import { NotificationContext } from '../context/NotificationContext';
 import { DiscountContext } from '../context/DiscountContext';
-import { UserContext } from '../context/UserContext';
 import { formatCurrency } from '../utils/formatCurrency';
 import { LocalOffer, Close } from '@mui/icons-material';
 
@@ -13,7 +12,6 @@ const Checkout = () => {
   const { cartItems, getTotalPrice, clearCart } = useContext(CartContext);
   const { showNotification } = useContext(NotificationContext);
   const { appliedCoupon, discountAmount, applyCoupon, removeCoupon } = useContext(DiscountContext);
-  const { addOrder, isAuthenticated } = useContext(UserContext);
   const [activeStep, setActiveStep] = useState(0);
   const [couponCode, setCouponCode] = useState('');
   const [formData, setFormData] = useState({

@@ -3,7 +3,6 @@ import { Container, Grid, Box, Typography, TextField, FormControl, InputLabel, S
 import { useTheme } from '@mui/material/styles';
 import { ProductContext } from '../context/ProductContext';
 import ProductCard from '../components/ProductCard';
-import { Search } from '@mui/icons-material';
 
 const Products = () => {
   const theme = useTheme();
